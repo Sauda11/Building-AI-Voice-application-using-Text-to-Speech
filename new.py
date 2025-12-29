@@ -50,16 +50,17 @@ def display():
   d={1:"hi",2:"ta",3:"te",4:"mr",5:"gu",6:"fr",7:"ml",8:"pa",9:"bn",10:"de"}
   return d.get(ch,"es")
 def main():
+  global text
   target_language=display()
   while True:
     original_text=text()
     if not original_text:
       continue
     if original_text.lower() in ["exist","stop"]:
-      speak("Goodbye")
+      a("Goodbye")
       break
   translated_text=translate(original_text,target_language)
   if translated_text:
-    speak(translated_text,rate=130)
+    a(translated_text,rate=130)
 
 main()
