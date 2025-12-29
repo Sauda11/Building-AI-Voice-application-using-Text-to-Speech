@@ -53,7 +53,7 @@ def main():
   global text
   target_language=display()
   while True:
-    original_text=text()
+    original_text=next()
     if not original_text:
       continue
     if original_text.lower() in ["exist","stop"]:
